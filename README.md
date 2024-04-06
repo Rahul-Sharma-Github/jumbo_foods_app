@@ -5,7 +5,7 @@
 # 
 Back-end =
  - NodeJS Custom Backend API
- - ExpressJs
+ - ExpressJs server 
  - MongoDB Database 
  - mongoose
  - npm
