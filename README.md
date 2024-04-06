@@ -2,7 +2,7 @@
 #
 ### Technologies used in Project =
 # 
-* Back-end =
+** Back-end =
 - NodeJS Custom Backend API
 - ExpressJs
 - MongoDB
