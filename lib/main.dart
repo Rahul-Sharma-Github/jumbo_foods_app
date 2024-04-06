@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,11 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: const Placeholder(
-        child: Center(
-          child: Text('Home'),
-        ),
-      ),
+      home: const HomePage(),
     );
   }
 }
