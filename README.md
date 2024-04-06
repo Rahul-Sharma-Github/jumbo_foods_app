@@ -3,13 +3,13 @@
 ### Technologies used in Project =
 # 
 Back-end =
- - -NodeJS Custom Backend API
+ - NodeJS Custom Backend API
  - ExpressJs
  - MongoDB
  - mongoose
  - npm
 
 Front-end =
-- Flutter
-- Dart
+ - Flutter
+ - Dart
 # 
