@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_page.dart';
 
-// import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
+import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
 import 'app/core/routes/app_pages/home_page_nested_pages.dart';
 
 void main() {

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class FoodCategoryPage extends StatelessWidget {
+  const FoodCategoryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Placeholder(
       child: Center(
-        child: Text('Home Page'),
+        child: Text('Food Category Page'),
       ),
     );
   }
