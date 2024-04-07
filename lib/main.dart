@@ -4,6 +4,7 @@ import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages
 
 import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
 import 'app/core/routes/app_pages/home_page_nested_pages.dart';
+import 'app/features/users_panel/food_offers/presentation/pages/food_offers_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,11 +29,11 @@ class MyApp extends StatelessWidget {
           page: () => const HomePage(),
           children: homePageNestedPages,
         ),
-        // GetPage(
-        //   name: '/Food_Offers',
-        //   page: () => FoodOffersPage(),
-        //   children: foodOffersNestedPages,
-        // ),
+        GetPage(
+          name: '/Food_Offers',
+          page: () => const FoodOffersPage(),
+          children: foodOffersNestedPages,
+        ),
       ],
       home: const HomePage(),
     );
