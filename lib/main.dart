@@ -15,8 +15,16 @@ class MyApp extends StatelessWidget {
       title: 'Jumbo Foods',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        textTheme: Typography.blackMountainView,
         useMaterial3: true,
       ),
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page: () => const HomePage()),
+        // GetPage(name: '/screen1', page: () => Screen1(),),
+        // GetPage(name: '/screen2', page: () => Screen2(),),
+        // GetPage(name: '/screen3', page: () => Screen3(),),
+      ],
       home: const HomePage(),
     );
   }
