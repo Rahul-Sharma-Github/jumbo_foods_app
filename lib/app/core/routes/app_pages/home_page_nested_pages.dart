@@ -6,7 +6,7 @@ import '../../../features/users_panel/search/presentation/pages/search_page.dart
 // Nested pages for HomePage
 final List<GetPage> homePageNestedPages = [
   GetPage(name: '/food_category', page: () => const FoodCategoryPage()),
-  GetPage(name: '/search', page: () => const SearchPage()),
+  GetPage(name: '/home_search', page: () => const SearchPage()),
 
   // Add more nested pages as needed
 ];
