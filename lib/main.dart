@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_page.dart';
 
+// import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
 import 'app/core/routes/app_pages/home_page_nested_pages.dart';
 
 void main() {
@@ -23,12 +24,15 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: [
         GetPage(
-            name: '/',
-            page: () => const HomePage(),
-            children: homePageNestedPages),
-        // GetPage(name: '/screen1', page: () => Screen1(),),
-        // GetPage(name: '/screen2', page: () => Screen2(),),
-        // GetPage(name: '/screen3', page: () => Screen3(),),
+          name: '/',
+          page: () => const HomePage(),
+          children: homePageNestedPages,
+        ),
+        // GetPage(
+        //   name: '/Food_Offers',
+        //   page: () => FoodOffersPage(),
+        //   children: foodOffersNestedPages,
+        // ),
       ],
       home: const HomePage(),
     );
