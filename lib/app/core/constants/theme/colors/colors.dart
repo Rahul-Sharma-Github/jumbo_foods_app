@@ -1,29 +1,21 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class AppColors {
-  // // Sheet Colors
-  // static const Color backSheetColor = Color(0xff3C3B3B);
-  // static const Color frontSheetColor = Color(0xffFFFFFF);
-  // static const Color scheduleSummarySheetColor = Color(0xffD9D9D9);
+  // App Background
+  static const Color appBackground = Color(0xffffffff);
 
-  // // Input Text Box Colors
-  // static const Color inputTextBoxLabelColor = Color(0xff000000);
-  // static const Color inputTextBoxInnerColor = Color(0xffF4EFEF);
+  // Grid Child Container background color
+  static const Color gridChildContainerBackground = Color(0xfff1f2f3);
 
-  // // Button Color
-  // static const Color mainButtonColor = Color(0xff343434);
-  // static const knowMoreButtonColor = Color(0xff737475);
+  // Search Button Background color
+  static const Color searchButtonBackground = Color(0xffffdec7);
 
-  // // Card Colors
-  // static const Color serviceCardColor = Color(0xffE3E6E9);
+  // BottomNavigationBar Background color
+  static const Color bottomNavigationBarBackground = Color(0xff647247);
 
-  // // Service Status Color
-  // static const Color notStartedBoxColor = Color(0xff737475);
-  // static const Color pendingOrRuningBoxColor = Color(0xffF4A227);
-  // static const Color doneOrPaidBoxColor = Color(0xff3EBF01);
+  // BottomNavigationBar item inActive color
+  static const Color bottomNavigationBaritemInactive = Color(0xffacb8c1);
 
-  // // Snackbar Color
-  // static const Color snackBarColorSuccess = Color(0xff3EBF01);
-  // static const Color snackBarColorWarning = Color(0xffF0952B);
-  // static const Color snackBarColorNormal = Color(0xff3C3B3B);
+  // BottomNavigationBar item Active color
+  static const Color bottomNavigationBaritemActive = Color(0xff029742);
 }
