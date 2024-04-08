@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_page.dart';
+import 'package:jumbo_foods_app/app/features/users_panel/profile/presentation/pages/profile_page.dart';
 
 import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
 import 'app/core/routes/app_pages/home_page_nested_pages.dart';
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Jumbo Foods',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
@@ -33,6 +35,10 @@ class MyApp extends StatelessWidget {
           name: '/Food_Offers',
           page: () => const FoodOffersPage(),
           children: foodOffersNestedPages,
+        ),
+        GetPage(
+          name: '/Profile',
+          page: () => const ProfilePage(),
         ),
       ],
       home: const HomePage(),
