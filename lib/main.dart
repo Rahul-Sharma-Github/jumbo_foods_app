@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => const HomePage(),
+          page: () => HomePage(),
           children: homePageNestedPages,
         ),
         GetPage(
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           page: () => const ProfilePage(),
         ),
       ],
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
