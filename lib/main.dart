@@ -7,7 +7,8 @@ import 'app/core/routes/app_pages/food_offers_nested_pages.dart';
 import 'app/core/routes/app_pages/home_page_nested_pages.dart';
 import 'app/features/users_panel/food_offers/presentation/pages/food_offers_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

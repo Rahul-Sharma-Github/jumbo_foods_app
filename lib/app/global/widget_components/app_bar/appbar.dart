@@ -27,7 +27,7 @@ PreferredSizeWidget appBar() {
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(
                       const EdgeInsets.symmetric(horizontal: 0, vertical: 0)),
-                  maximumSize: MaterialStateProperty.all(const Size(110, 60)),
+                  maximumSize: MaterialStateProperty.all(const Size(110, 50)),
                 ),
                 onPressed: () {},
                 child: const Padding(
