@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_page.dart';
+import 'package:jumbo_foods_app/app/features/users_panel/home/presentation/pages/home_wrapper_.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/instagram/presentation/pages/instagram_page.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/profile/presentation/pages/profile_page.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/whataspp/presentation/pages/whatsapp_page.dart';
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: '/',
-          page: () => HomePage(),
+          page: () => HomeWrapperPage(),
           children: homePageNestedPages,
         ),
         GetPage(
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
           page: () => const ProfilePage(),
         ),
       ],
-      home: HomePage(),
+      home: HomeWrapperPage(),
     );
   }
 }
