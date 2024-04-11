@@ -69,18 +69,22 @@ class HomePage extends StatelessWidget {
                 label: 'Home',
               ),
               NavigationDestination(
+                selectedIcon: Icon(Icons.local_offer),
                 icon: Icon(Icons.local_offer_outlined),
                 label: 'Offers',
               ),
               NavigationDestination(
+                selectedIcon: Icon(Icons.mark_chat_unread),
                 icon: Icon(Icons.mark_chat_unread_outlined),
                 label: 'WhatsApp',
               ),
               NavigationDestination(
+                selectedIcon: Icon(Icons.chat_bubble),
                 icon: Icon(Icons.chat_bubble_outline),
                 label: 'Instagram',
               ),
               NavigationDestination(
+                selectedIcon: Icon(Icons.person),
                 icon: Icon(Icons.person_outline),
                 label: 'Profile',
               ),
