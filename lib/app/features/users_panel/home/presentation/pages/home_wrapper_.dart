@@ -22,12 +22,12 @@ class HomeWrapperPage extends StatelessWidget {
       body: Obx(
         () => IndexedStack(
           index: homePageController.indexOfIndexedStackWidget.value,
-          children: const [
+          children: [
             HomePage(),
-            FoodOffersPage(),
-            WhatsappPage(),
-            InstagramPage(),
-            ProfilePage(),
+            const FoodOffersPage(),
+            const WhatsappPage(),
+            const InstagramPage(),
+            const ProfilePage(),
           ],
         ),
       ),

@@ -4,16 +4,16 @@ import '../../../core/constants/assets_path/assets_path.dart';
 
 PreferredSizeWidget appBar() {
   return AppBar(
-    elevation: 5,
+    // elevation: 5,
     toolbarHeight: 65,
-    leadingWidth: 135,
+    leadingWidth: 110,
     leading: Center(
       child: Padding(
         padding: const EdgeInsets.only(left: 0, top: 10),
         child: Center(
           child: Image.asset(
             AssetsPaths.titleLogo,
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
           ),
         ),
       ),
