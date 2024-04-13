@@ -125,6 +125,14 @@ class HomePage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 40.0),
+              const Divider(),
+              const SizedBox(height: 20.0),
+              // Footer Image Widget
+              SizedBox(
+                width: 300,
+                child: Image.asset(AssetsPaths.bottomLogoImage),
+              ),
+              const SizedBox(height: 40.0),
             ],
           ),
         ),
