@@ -38,7 +38,29 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10.0),
+              const SizedBox(height: 40.0),
+
+              // Title Widget
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Explore Our Delicious Categories',
+                      textAlign: TextAlign.center,
+                      maxLines: 2,
+                      textScaler: TextScaler.linear(1.0),
+                      style: TextStyle(
+                        fontSize: 22.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30.0),
+
+              //
             ],
           ),
         ),
