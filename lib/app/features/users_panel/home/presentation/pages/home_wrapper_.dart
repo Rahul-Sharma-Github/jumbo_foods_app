@@ -12,8 +12,8 @@ import 'home_page.dart';
 class HomeWrapperPage extends StatelessWidget {
   HomeWrapperPage({super.key});
 
-  // injecting instance of HomePageController class
-  final HomeWrapperController homePageController =
+  // injecting instance of homeWrapperController class
+  final HomeWrapperController homeWrapperController =
       Get.put(HomeWrapperController());
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class HomeWrapperPage extends StatelessWidget {
       appBar: appBar(),
       body: Obx(
         () => IndexedStack(
-          index: homePageController.indexOfIndexedStackWidget.value,
+          index: homeWrapperController.indexOfIndexedStackWidget.value,
           children: [
             HomePage(),
             const FoodOffersPage(),
@@ -34,10 +34,10 @@ class HomeWrapperPage extends StatelessWidget {
       bottomNavigationBar: Obx(
         () => NavigationBar(
           // current selected index
-          selectedIndex: homePageController.indexOfIndexedStackWidget.value,
+          selectedIndex: homeWrapperController.indexOfIndexedStackWidget.value,
           // changing current selected index on item click
           onDestinationSelected: (index) {
-            homePageController.changeIndex(index);
+            homeWrapperController.changeIndex(index);
           },
           // Active item color
           indicatorColor: Colors.green,

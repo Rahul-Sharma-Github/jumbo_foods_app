@@ -11,7 +11,7 @@ class HomePageController extends GetxController {
     AssetsPaths.sliderImage_3,
   ];
 
-  // List of Food Category Images
+  // List<Map> of Food Category Name with Images
   List<Map<String, String>> foodCategoryList = [
     {
       'name': 'Burger',

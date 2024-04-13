@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 // carousel_slider package
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:jumbo_foods_app/app/core/constants/assets_path/assets_path.dart';
 import 'package:jumbo_foods_app/app/core/constants/theme/colors/colors.dart';
 import '../controllers/home_page_controller.dart';
 
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Carousel_Slider
+              // Carousel_Slider Widget
               const SizedBox(height: 10.0),
               Center(
                 child: SizedBox(
@@ -68,7 +69,7 @@ class HomePage extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   crossAxisSpacing: 12,
-                  mainAxisSpacing: 12,
+                  mainAxisSpacing: 14,
                   // mainAxisExtent: 150,
                   childAspectRatio: 0.65,
                 ),
