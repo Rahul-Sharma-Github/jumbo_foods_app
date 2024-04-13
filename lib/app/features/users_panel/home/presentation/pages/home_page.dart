@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Whole Page is Scrollable
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14.0),
@@ -127,6 +128,7 @@ class HomePage extends StatelessWidget {
               const SizedBox(height: 40.0),
               const Divider(),
               const SizedBox(height: 20.0),
+
               // Footer Image Widget
               SizedBox(
                 width: 300,
