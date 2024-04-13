@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: avoid_unnecessary_containers
 
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 // carousel_slider package
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:get/get.dart';
-
+import 'package:jumbo_foods_app/app/core/constants/theme/colors/colors.dart';
 import '../controllers/home_page_controller.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,7 +33,6 @@ class HomePage extends StatelessWidget {
                     },
                     options: CarouselOptions(
                       autoPlay: true,
-                      // enlargeCenterPage: true,
                       viewportFraction: 1.0,
                     ),
                   ),
@@ -60,7 +60,70 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 30.0),
 
-              //
+              // GridView Widget
+              GridView.builder(
+                shrinkWrap: true,
+                itemCount: homePageController.foodCategoryList.length,
+                physics: const ClampingScrollPhysics(),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 12,
+                  // mainAxisExtent: 150,
+                  childAspectRatio: 0.65,
+                ),
+                itemBuilder: (context, index) {
+                  return Container(
+                    decoration: const BoxDecoration(
+                      color: AppColors.gridChildContainerBackground,
+                    ),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(
+                                horizontal: 10.0, vertical: 10.0),
+                            decoration: BoxDecoration(
+                              // border: Border.all(),
+                              borderRadius: BorderRadius.circular(16.0),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(homePageController
+                                    .foodCategoryList[index]['image']!),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Flexible(
+                          fit: FlexFit.loose,
+                          flex: 1,
+                          child: Center(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    homePageController.foodCategoryList[index]
+                                        ['name']!,
+                                    textAlign: TextAlign.center,
+                                    maxLines: 2,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 40.0),
             ],
           ),
         ),
