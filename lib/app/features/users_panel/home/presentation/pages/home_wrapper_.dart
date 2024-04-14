@@ -24,7 +24,7 @@ class HomeWrapperPage extends StatelessWidget {
           index: homeWrapperController.indexOfIndexedStackWidget.value,
           children: [
             HomePage(),
-            const FoodOffersPage(),
+            FoodOffersPage(),
             const WhatsappPage(),
             const InstagramPage(),
             const ProfilePage(),
