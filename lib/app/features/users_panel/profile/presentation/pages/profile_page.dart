@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../controllers/profile_page_controller.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
+  ProfilePage({super.key});
+
+  final ProfilePageController profilePageController =
+      Get.put(ProfilePageController());
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
-      child: Center(
-        child: Text('Profile Page'),
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }
