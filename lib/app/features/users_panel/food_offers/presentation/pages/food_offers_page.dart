@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../../core/constants/assets_path/assets_path.dart';
 import '../controllers/food_offers_controller.dart';
 
 class FoodOffersPage extends StatelessWidget {
@@ -44,7 +45,19 @@ class FoodOffersPage extends StatelessWidget {
                         )),
                   );
                 },
-              )
+              ),
+
+              //Footer Logo Image
+              const SizedBox(height: 40.0),
+              const Divider(),
+              const SizedBox(height: 20.0),
+
+              // Footer Image Widget
+              SizedBox(
+                width: 300,
+                child: Image.asset(AssetsPaths.bottomLogoImage),
+              ),
+              const SizedBox(height: 40.0),
             ],
           ),
         ),

@@ -27,7 +27,7 @@ class HomeWrapperPage extends StatelessWidget {
             FoodOffersPage(),
             const WhatsappPage(),
             const InstagramPage(),
-            const ProfilePage(),
+            ProfilePage(),
           ],
         ),
       ),
