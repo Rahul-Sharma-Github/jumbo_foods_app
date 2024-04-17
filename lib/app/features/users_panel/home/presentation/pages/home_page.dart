@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:jumbo_foods_app/app/core/constants/assets_path/assets_path.dart';
 import 'package:jumbo_foods_app/app/core/constants/theme/colors/colors.dart';
+import '../../../food_category/presentation/pages/food_category_page.dart';
 import '../controllers/home_page_controller.dart';
 
 class HomePage extends StatelessWidget {
@@ -75,52 +76,61 @@ class HomePage extends StatelessWidget {
                   childAspectRatio: 0.65,
                 ),
                 itemBuilder: (context, index) {
-                  return Container(
-                    decoration: const BoxDecoration(
-                      color: AppColors.gridChildContainerBackground,
-                    ),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          flex: 2,
-                          child: Container(
-                            margin: const EdgeInsets.symmetric(
-                                horizontal: 10.0, vertical: 10.0),
-                            decoration: BoxDecoration(
-                              // border: Border.all(),
-                              borderRadius: BorderRadius.circular(16.0),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage(homePageController
-                                    .foodCategoryList[index]['image']!),
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const FoodCategoryPage(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        color: AppColors.gridChildContainerBackground,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              margin: const EdgeInsets.symmetric(
+                                  horizontal: 10.0, vertical: 10.0),
+                              decoration: BoxDecoration(
+                                // border: Border.all(),
+                                borderRadius: BorderRadius.circular(16.0),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: AssetImage(homePageController
+                                      .foodCategoryList[index]['image']!),
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Flexible(
-                          fit: FlexFit.loose,
-                          flex: 1,
-                          child: Center(
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    homePageController.foodCategoryList[index]
-                                        ['name']!,
-                                    textAlign: TextAlign.center,
-                                    maxLines: 2,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
+                          Flexible(
+                            fit: FlexFit.loose,
+                            flex: 1,
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      homePageController.foodCategoryList[index]
+                                          ['name']!,
+                                      textAlign: TextAlign.center,
+                                      maxLines: 2,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   );
                 },
