@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../controllers/food_category_controller.dart';
 
 class FoodCategoryPage extends StatelessWidget {
-  const FoodCategoryPage({super.key, required this.category});
+  FoodCategoryPage({super.key, required this.category});
 
   final String category;
+
+  final FoodCategoryController foodCategoryController =
+      Get.put(FoodCategoryController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +25,26 @@ class FoodCategoryPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // FutureBuilder Widget
+              // ListView.builder Widget
+              FutureBuilder(
+                future:
+                    foodCategoryController.fetchMenuItemsByCategory(category),
+                builder: (context, snapshot) {
+                  if (snapshot.hasData) {
+                    return ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: snapshot.data.length,
+                      itemBuilder: (context, index) {
+                        return ExpansionTile(
+                          title: Text(snapshot.data[index]['itemname']!),
+                        );
+                      },
+                    );
+                  } else {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                },
+              ),
             ],
           ),
         ),
