@@ -80,7 +80,10 @@ class HomePage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context) => const FoodCategoryPage(),
+                          builder: (context) => FoodCategoryPage(
+                            category: homePageController.foodCategoryList[index]
+                                ['name']!,
+                          ),
                         ),
                       );
                     },
