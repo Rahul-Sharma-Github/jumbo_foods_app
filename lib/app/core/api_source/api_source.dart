@@ -1,22 +1,17 @@
-class ApiSource {
-  // onTap: () async {
-  //                 try {
-  //                   var data = await Dio().get(
-  //                     'http://10.0.2.2:3000/all-menu-items',
-  //                     options: Options(responseType: ResponseType.json),
-  //                   );
+import 'package:dio/dio.dart';
+import 'package:jumbo_foods_app/app/core/api_source/api_endpoints.dart';
 
-  //                   print(data);
-  //                   print(data.runtimeType);
-  //                   print('\n');
-  //                   var after = data.data;
-  //                   print(after);
-  //                   print(after.runtimeType);
-  //                   print('\n');
-  //                   print(after[0]['itemname']);
-  //                   print('\n');
-  //                 } catch (e) {
-  //                   print(e);
-  //                 }
-  //               },
+class ApiSource {
+  // Dio Instance with Options
+  static final dio = Dio(
+    BaseOptions(
+      baseUrl: ApiEndpoints.baseUrl,
+      connectTimeout: ApiEndpoints.connectionTimeout,
+      receiveTimeout: ApiEndpoints.receiveTimeout,
+      headers: {
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      responseType: ResponseType.json,
+    ),
+  );
 }
