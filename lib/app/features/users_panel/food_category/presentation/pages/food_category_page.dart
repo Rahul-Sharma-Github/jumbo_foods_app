@@ -20,7 +20,7 @@ class FoodCategoryPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14.0),
+          padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 5.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,7 +36,45 @@ class FoodCategoryPage extends StatelessWidget {
                       itemCount: snapshot.data.length,
                       itemBuilder: (context, index) {
                         return ExpansionTile(
-                          title: Text(snapshot.data[index]['itemname']!),
+                          dense: false,
+                          tilePadding:
+                              const EdgeInsets.symmetric(horizontal: 0.0),
+                          title: Row(
+                            children: [
+                              Text(
+                                snapshot.data[index]['itemname']!,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                              const SizedBox(width: 5),
+                              Text(
+                                '= ${snapshot.data[index]['itemprice']!.toString()} \u{20B9}',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                          subtitle: Row(
+                            children: [
+                              Text(snapshot.data[index]['addonitemname']!),
+                              const SizedBox(width: 5),
+                              Text(
+                                  '=  +${snapshot.data[index]['addonitemprice']!.toString()} \u{20B9}'),
+                            ],
+                          ),
+                          children: [
+                            Row(
+                              children: [
+                                Flexible(
+                                  fit: FlexFit.loose,
+                                  child: Text(
+                                      snapshot.data[index]['description']!),
+                                ),
+                              ],
+                            )
+                          ],
                         );
                       },
                     );
