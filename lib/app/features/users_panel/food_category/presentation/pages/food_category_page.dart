@@ -25,7 +25,7 @@ class FoodCategoryPage extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // ListView.builder Widget
+              // FutureBuilder Widget  with  ListView.builder Widget
               FutureBuilder(
                 future:
                     foodCategoryController.fetchMenuItemsByCategory(category),
@@ -35,6 +35,7 @@ class FoodCategoryPage extends StatelessWidget {
                       shrinkWrap: true,
                       itemCount: snapshot.data.length,
                       itemBuilder: (context, index) {
+                        // ExpansionTile Widget
                         return ExpansionTile(
                           dense: false,
                           tilePadding:
