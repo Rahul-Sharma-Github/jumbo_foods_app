@@ -18,7 +18,7 @@ class HomeWrapperPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar(),
+      appBar: appBar(context),
       body: Obx(
         () => IndexedStack(
           index: homeWrapperController.indexOfIndexedStackWidget.value,

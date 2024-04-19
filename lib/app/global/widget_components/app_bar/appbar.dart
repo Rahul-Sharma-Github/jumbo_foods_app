@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:jumbo_foods_app/app/features/users_panel/search/presentation/pages/search_page.dart';
 
 import '../../../core/constants/assets_path/assets_path.dart';
 
-PreferredSizeWidget appBar() {
+PreferredSizeWidget appBar(BuildContext context) {
   return AppBar(
     // elevation: 5,
     toolbarHeight: 65,
@@ -29,7 +30,13 @@ PreferredSizeWidget appBar() {
                       const EdgeInsets.symmetric(horizontal: 0, vertical: 0)),
                   maximumSize: MaterialStateProperty.all(const Size(110, 50)),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const SearchPage(),
+                    ),
+                  );
+                },
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
