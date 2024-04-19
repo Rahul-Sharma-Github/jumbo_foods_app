@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      smartManagement: SmartManagement.full,
       debugShowCheckedModeBanner: false,
       title: 'Jumbo Foods',
       theme: ThemeData(
@@ -31,32 +32,6 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder>{
         '/': (BuildContext context) => HomeWrapperPage(),
       },
-      // getPages: [
-      //   GetPage(
-      //     name: '/',
-      //     page: () => HomeWrapperPage(),
-      //     children: homePageNestedPages,
-      //   ),
-      //   GetPage(
-      //     name: '/Food_Offers',
-      //     page: () => const FoodOffersPage(),
-      //     children: foodOffersNestedPages,
-      //   ),
-      //   GetPage(
-      //     name: '/WhatsApp',
-      //     page: () => const WhatsappPage(),
-      //     // children: foodOffersNestedPages,
-      //   ),
-      //   GetPage(
-      //     name: '/Instagram',
-      //     page: () => const InstagramPage(),
-      //     // children: foodOffersNestedPages,
-      //   ),
-      //   GetPage(
-      //     name: '/Profile',
-      //     page: () => const ProfilePage(),
-      //   ),
-      // ],
     );
   }
 }

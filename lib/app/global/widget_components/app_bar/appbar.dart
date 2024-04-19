@@ -33,7 +33,7 @@ PreferredSizeWidget appBar(BuildContext context) {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const SearchPage(),
+                      builder: (context) => SearchPage(),
                     ),
                   );
                 },
