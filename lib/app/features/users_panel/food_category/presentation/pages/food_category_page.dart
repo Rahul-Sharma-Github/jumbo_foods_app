@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jumbo_foods_app/app/core/constants/theme/textstyles/textstyle.dart';
 
 import '../controllers/food_category_controller.dart';
 
@@ -44,16 +45,14 @@ class FoodCategoryPage extends StatelessWidget {
                             children: [
                               Text(
                                 snapshot.data[index]['itemname']!,
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                style: AppTextStyle
+                                    .foodCategoryMenuItemNameAndprice,
                               ),
                               const SizedBox(width: 5),
                               Text(
                                 '= ${snapshot.data[index]['itemprice']!.toString()} \u{20B9}',
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                ),
+                                style: AppTextStyle
+                                    .foodCategoryMenuItemNameAndprice,
                               ),
                             ],
                           ),

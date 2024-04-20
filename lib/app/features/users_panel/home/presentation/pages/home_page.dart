@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:jumbo_foods_app/app/core/constants/assets_path/assets_path.dart';
 import 'package:jumbo_foods_app/app/core/constants/theme/colors/colors.dart';
+import 'package:jumbo_foods_app/app/core/constants/theme/textstyles/textstyle.dart';
 import '../../../food_category/presentation/pages/food_category_page.dart';
 import '../controllers/home_page_controller.dart';
 
@@ -53,10 +54,7 @@ class HomePage extends StatelessWidget {
                       textAlign: TextAlign.center,
                       maxLines: 2,
                       textScaler: TextScaler.linear(1.0),
-                      style: TextStyle(
-                        fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: AppTextStyle.categoryTitle,
                     ),
                   ),
                 ],
@@ -123,9 +121,7 @@ class HomePage extends StatelessWidget {
                                           ['name']!,
                                       textAlign: TextAlign.center,
                                       maxLines: 2,
-                                      style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                                      style: AppTextStyle.categoryName,
                                     ),
                                   ),
                                 ],

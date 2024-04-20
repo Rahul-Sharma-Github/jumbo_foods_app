@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jumbo_foods_app/app/core/constants/theme/textstyles/textstyle.dart';
 
 import '../../../../../core/constants/assets_path/assets_path.dart';
 import '../controllers/profile_page_controller.dart';
@@ -29,10 +30,7 @@ class ProfilePage extends StatelessWidget {
                     fit: FlexFit.loose,
                     child: Text(
                       'Location on Map',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
-                      ),
+                      style: AppTextStyle.profileTitles,
                     ),
                   ),
                 ],
@@ -55,10 +53,7 @@ class ProfilePage extends StatelessWidget {
                     fit: FlexFit.loose,
                     child: Text(
                       'Address',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16.0,
-                      ),
+                      style: AppTextStyle.profileTitles,
                     ),
                   ),
                 ],
@@ -81,10 +76,7 @@ class ProfilePage extends StatelessWidget {
                             fit: FlexFit.loose,
                             child: Text(
                               'JUMBO',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.0,
-                              ),
+                              style: AppTextStyle.profileAddresstitle,
                             ),
                           ),
                         ],

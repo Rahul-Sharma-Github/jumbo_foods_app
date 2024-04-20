@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jumbo_foods_app/app/core/constants/theme/textstyles/textstyle.dart';
 import 'package:jumbo_foods_app/app/features/users_panel/search/presentation/controllers/search_page_controller.dart';
 
 class SearchPage extends StatelessWidget {
@@ -46,7 +47,7 @@ class SearchPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return searchPageController.filteredList.isEmpty
                           ? const Center(
-                              child: Text('Item Not Available !'),
+                              child: Text('Items Not Available !'),
                             )
                           : ExpansionTile(
                               dense: false,
@@ -57,16 +58,14 @@ class SearchPage extends StatelessWidget {
                                   Text(
                                     searchPageController.filteredList[index]
                                         ['itemname']!,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                                    style: AppTextStyle
+                                        .foodCategoryMenuItemNameAndprice,
                                   ),
                                   const SizedBox(width: 5),
                                   Text(
                                     '= ${searchPageController.filteredList[index]['itemprice']!} \u{20B9}',
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
+                                    style: AppTextStyle
+                                        .foodCategoryMenuItemNameAndprice,
                                   ),
                                 ],
                               ),

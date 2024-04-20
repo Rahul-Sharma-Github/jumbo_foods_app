@@ -41,10 +41,13 @@ PreferredSizeWidget appBar(BuildContext context) {
                   padding: EdgeInsets.symmetric(horizontal: 12),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text('Search'),
-                      Icon(Icons.search),
+                      Icon(
+                        Icons.search,
+                        size: 22.0,
+                      ),
                     ],
                   ),
                 )),
