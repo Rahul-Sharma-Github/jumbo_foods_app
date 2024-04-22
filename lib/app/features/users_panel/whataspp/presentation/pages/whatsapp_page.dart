@@ -14,7 +14,12 @@ class WhatsappPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            whatsAppPageController.launchWhatsApp(
+              '8233330940',
+              message: 'Hello !',
+            );
+          },
           child: const Text('WhatsApp Us'),
         ),
       ),
