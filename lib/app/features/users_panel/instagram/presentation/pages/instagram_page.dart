@@ -5,9 +5,12 @@ class InstagramPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
-      child: Center(
-        child: Text('Instagram Page'),
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: const Text('Visit Instagram Profile'),
+        ),
       ),
     );
   }
