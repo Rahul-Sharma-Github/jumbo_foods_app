@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../controllers/whatsapp_page_controller.dart';
 
 class WhatsappPage extends StatelessWidget {
-  const WhatsappPage({super.key});
+  WhatsappPage({super.key});
+
+  final WhatsAppPageController whatsAppPageController =
+      Get.put(WhatsAppPageController());
 
   @override
   Widget build(BuildContext context) {

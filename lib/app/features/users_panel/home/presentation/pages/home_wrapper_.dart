@@ -25,7 +25,7 @@ class HomeWrapperPage extends StatelessWidget {
           children: [
             HomePage(),
             FoodOffersPage(),
-            const WhatsappPage(),
+            WhatsappPage(),
             const InstagramPage(),
             ProfilePage(),
           ],
