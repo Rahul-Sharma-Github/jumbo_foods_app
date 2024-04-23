@@ -14,9 +14,7 @@ class InstagramPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            instagramPageController.launchInstagram('jumbofoods_');
-          },
+          onPressed: () {},
           child: const Text('Visit Instagram Profile'),
         ),
       ),
