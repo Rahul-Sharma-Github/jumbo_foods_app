@@ -18,6 +18,7 @@ class SearchPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
           child: Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: 14.0, vertical: 15.0),
@@ -42,6 +43,7 @@ class SearchPage extends StatelessWidget {
                 // ListView.builder Widget to Display Filtered
                 Obx(
                   () => ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: searchPageController.filteredList.length,
                     itemBuilder: (context, index) {
