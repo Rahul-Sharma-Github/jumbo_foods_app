@@ -17,18 +17,27 @@ class HomeWrapperPage extends StatelessWidget {
       Get.put(HomeWrapperController());
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double screenWidth = mediaQueryData.size.width;
+    // double screenHeight = mediaQueryData.size.height;
     return Scaffold(
       appBar: appBar(context),
       body: Obx(
-        () => IndexedStack(
-          index: homeWrapperController.indexOfIndexedStackWidget.value,
-          children: [
-            HomePage(),
-            FoodOffersPage(),
-            WhatsappPage(),
-            InstagramPage(),
-            ProfilePage(),
-          ],
+        () => Center(
+          child: SizedBox(
+            width: screenWidth > 866 ? screenWidth / 1.5 : screenWidth,
+            child: IndexedStack(
+              alignment: Alignment.center,
+              index: homeWrapperController.indexOfIndexedStackWidget.value,
+              children: [
+                HomePage(),
+                FoodOffersPage(),
+                WhatsappPage(),
+                InstagramPage(),
+                ProfilePage(),
+              ],
+            ),
+          ),
         ),
       ),
       bottomNavigationBar: Obx(

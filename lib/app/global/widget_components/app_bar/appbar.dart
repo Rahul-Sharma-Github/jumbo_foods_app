@@ -4,10 +4,13 @@ import 'package:jumbo_foods_app/app/features/users_panel/search/presentation/pag
 import '../../../core/constants/assets_path/assets_path.dart';
 
 PreferredSizeWidget appBar(BuildContext context) {
+  MediaQueryData mediaQueryData = MediaQuery.of(context);
+  double screenWidth = mediaQueryData.size.width;
+  // double screenHeight = mediaQueryData.size.height;
   return AppBar(
     // elevation: 5,
-    toolbarHeight: 65,
-    leadingWidth: 110,
+    toolbarHeight: screenWidth > 866 ? 100 : 65,
+    leadingWidth: screenWidth > 866 ? 150 : 110,
     leading: Center(
       child: Padding(
         padding: const EdgeInsets.only(left: 0, top: 10),
@@ -26,8 +29,8 @@ PreferredSizeWidget appBar(BuildContext context) {
           child: SizedBox(
             child: ElevatedButton(
                 style: ButtonStyle(
-                  padding: MaterialStateProperty.all(
-                      const EdgeInsets.symmetric(horizontal: 0, vertical: 0)),
+                  padding: MaterialStateProperty.all(EdgeInsets.symmetric(
+                      horizontal: 0, vertical: screenWidth > 866 ? 25 : 0)),
                   maximumSize: MaterialStateProperty.all(const Size(110, 50)),
                 ),
                 onPressed: () {

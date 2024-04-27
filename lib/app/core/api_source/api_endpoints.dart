@@ -1,5 +1,5 @@
 class ApiEndpoints {
-  static const String baseUrl = 'http://192.168.1.8:3000';
+  static const String baseUrl = 'http://localhost:3000';
   static const String createMenuItem = '/create-menu-item';
   static const String getAllMenuItems = '/all-menu-items';
   static const String getAllMenuItemsByCategory = '/menu-items';
