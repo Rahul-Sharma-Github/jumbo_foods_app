@@ -10,6 +10,10 @@ class AppTextStyle {
   static const TextStyle categoryName = TextStyle(
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle categoryNameforWeb = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 22,
+  );
 
   // Profile Page
   static const TextStyle profileTitles = TextStyle(

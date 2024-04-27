@@ -17,6 +17,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double screenWidth = mediaQueryData.size.width;
+    // double screenHeight = mediaQueryData.size.height;
     return Scaffold(
       // Whole Page is Scrollable
       body: SingleChildScrollView(
@@ -42,10 +45,10 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 40.0),
+              SizedBox(height: screenWidth > 1280 ? 100 : 40.0),
 
               // Title Widget
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
@@ -53,25 +56,26 @@ class HomePage extends StatelessWidget {
                       'Explore Our Delicious Categories',
                       textAlign: TextAlign.center,
                       maxLines: 2,
-                      textScaler: TextScaler.linear(1.0),
+                      textScaler:
+                          TextScaler.linear(screenWidth > 1280 ? 2.0 : 1.0),
                       style: AppTextStyle.categoryTitle,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 30.0),
+              SizedBox(height: screenWidth > 1280 ? 60.0 : 30.0),
 
               // GridView Widget
               GridView.builder(
                 shrinkWrap: true,
                 itemCount: homePageController.foodCategoryList.length,
                 physics: const ClampingScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                  crossAxisSpacing: 12,
-                  mainAxisSpacing: 14,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: screenWidth > 1280 ? 4 : 3,
+                  crossAxisSpacing: screenWidth > 1280 ? 40 : 12,
+                  mainAxisSpacing: screenWidth > 1280 ? 40 : 14,
                   // mainAxisExtent: 150,
-                  childAspectRatio: 0.65,
+                  childAspectRatio: screenWidth > 1280 ? 0.75 : 0.65,
                 ),
                 itemBuilder: (context, index) {
                   return GestureDetector(
@@ -85,56 +89,61 @@ class HomePage extends StatelessWidget {
                         ),
                       );
                     },
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        color: AppColors.gridChildContainerBackground,
-                      ),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 2,
-                            child: Container(
-                              margin: const EdgeInsets.symmetric(
-                                  horizontal: 10.0, vertical: 10.0),
-                              decoration: BoxDecoration(
-                                // border: Border.all(),
-                                borderRadius: BorderRadius.circular(16.0),
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(homePageController
-                                      .foodCategoryList[index]['image']!),
+                    child: InkWell(
+                      mouseCursor: SystemMouseCursors.click,
+                      child: Container(
+                        decoration: const BoxDecoration(
+                          color: AppColors.gridChildContainerBackground,
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: screenWidth > 1280 ? 3 : 2,
+                              child: Container(
+                                margin: const EdgeInsets.symmetric(
+                                    horizontal: 10.0, vertical: 10.0),
+                                decoration: BoxDecoration(
+                                  // border: Border.all(),
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: AssetImage(homePageController
+                                        .foodCategoryList[index]['image']!),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Flexible(
-                            fit: FlexFit.loose,
-                            flex: 1,
-                            child: Center(
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                    child: Text(
-                                      homePageController.foodCategoryList[index]
-                                          ['name']!,
-                                      textAlign: TextAlign.center,
-                                      maxLines: 2,
-                                      style: AppTextStyle.categoryName,
+                            Flexible(
+                              fit: FlexFit.loose,
+                              flex: 1,
+                              child: Center(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        homePageController
+                                            .foodCategoryList[index]['name']!,
+                                        textAlign: TextAlign.center,
+                                        maxLines: 2,
+                                        style: screenWidth > 1280
+                                            ? AppTextStyle.categoryNameforWeb
+                                            : AppTextStyle.categoryName,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   );
                 },
               ),
-              const SizedBox(height: 40.0),
+              SizedBox(height: screenWidth > 1280 ? 100.0 : 40.0),
               const Divider(),
               const SizedBox(height: 20.0),
 

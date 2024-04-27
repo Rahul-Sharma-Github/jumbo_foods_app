@@ -25,7 +25,7 @@ class HomeWrapperPage extends StatelessWidget {
       body: Obx(
         () => Center(
           child: SizedBox(
-            width: screenWidth > 866 ? screenWidth / 1.5 : screenWidth,
+            width: screenWidth > 1280 ? screenWidth / 1.5 : screenWidth,
             child: IndexedStack(
               alignment: Alignment.center,
               index: homeWrapperController.indexOfIndexedStackWidget.value,
