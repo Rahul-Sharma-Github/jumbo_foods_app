@@ -44,4 +44,8 @@ class AssetsPaths {
       'assets/Images/Food Offers Images/offer_2.jpg';
   static const String foodOffer_3 =
       'assets/Images/Food Offers Images/offer_3.jpg';
+
+  // ProfilePage Direction Background Image
+  static const String directionBackground =
+      'assets/Images/Logo Images/Bottom Image Logo with Text/direction_background_image.png';
 }

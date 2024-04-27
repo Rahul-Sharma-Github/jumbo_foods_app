@@ -40,31 +40,60 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10.0),
-              SizedBox(
-                height: 250,
-                width: MediaQuery.of(context).size.width,
-                child: Card(
-                  margin: EdgeInsets.zero,
-                  child: Center(
-                    child: OutlinedButton(
-                      style: const ButtonStyle(),
-                      onPressed: () async {
-                        // Launching Google Map App with Specified Location
-                        const String mapUrl =
-                            "https://maps.app.goo.gl/KiQgkUd3nsGJgUoE6";
-                        if (mapUrl.isNotEmpty) {
-                          await launchUrl(Uri.parse(mapUrl));
-                        } else {
-                          Get.snackbar(
-                            'App Not Available',
-                            'Install Google Map First !',
-                            backgroundColor: Colors.orange[300],
-                          );
-                        }
-                      },
-                      child: const Text('See Direction on Google Map'),
-                    ),
+              Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage(AssetsPaths.directionBackground),
                   ),
+                ),
+                height: 350,
+                width: screenWidth,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 40.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          OutlinedButton(
+                            style: ButtonStyle(
+                              padding: MaterialStateProperty.all(
+                                const EdgeInsets.symmetric(
+                                    vertical: 30, horizontal: 30),
+                              ),
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.white),
+                            ),
+                            onPressed: () async {
+                              // Launching Google Map App with Specified Location
+                              const String mapUrl =
+                                  "https://maps.app.goo.gl/KiQgkUd3nsGJgUoE6";
+                              if (mapUrl.isNotEmpty) {
+                                await launchUrl(Uri.parse(mapUrl));
+                              } else {
+                                Get.snackbar(
+                                  'App Not Available',
+                                  'Install Google Map First !',
+                                  backgroundColor: Colors.orange[300],
+                                );
+                              }
+                            },
+                            child: const Text(
+                              'See Direction on Google Map',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 40),
