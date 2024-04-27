@@ -14,13 +14,16 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData mediaQueryData = MediaQuery.of(context);
+    double screenWidth = mediaQueryData.size.width;
+    // double screenHeight = mediaQueryData.size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const SizedBox(height: 10.0),
 
@@ -137,8 +140,10 @@ class ProfilePage extends StatelessWidget {
 
               // Footer Image Widget
               SizedBox(
-                width: 300,
-                child: Image.asset(AssetsPaths.bottomLogoImage),
+                width: screenWidth > 1280 ? 500 : 350,
+                child: Image.asset(
+                  AssetsPaths.bottomLogoImage,
+                ),
               ),
               const SizedBox(height: 40.0),
             ],
