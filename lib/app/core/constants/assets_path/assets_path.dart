@@ -52,4 +52,8 @@ class AssetsPaths {
   // Whatsapp Page logo
   static const String whatsappBackLogo =
       'assets/Images/Logo Images/Title Logo/whatsapp_logo.png';
+
+  // Instagram Page logo
+  static const String instagramBackLogo =
+      'assets/Images/Logo Images/Title Logo/instagram_logo.png';
 }
