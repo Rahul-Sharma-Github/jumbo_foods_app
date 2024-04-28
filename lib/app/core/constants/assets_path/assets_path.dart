@@ -48,4 +48,8 @@ class AssetsPaths {
   // ProfilePage Direction Background Image
   static const String directionBackground =
       'assets/Images/Logo Images/Bottom Image Logo with Text/direction_background_image.png';
+
+  // Whatsapp Page logo
+  static const String whatsappBackLogo =
+      'assets/Images/Logo Images/Title Logo/whatsapp_logo.png';
 }
