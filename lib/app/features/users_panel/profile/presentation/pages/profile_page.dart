@@ -41,13 +41,14 @@ class ProfilePage extends StatelessWidget {
               ),
               const SizedBox(height: 10.0),
               Container(
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16.0),
+                  image: const DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage(AssetsPaths.directionBackground),
                   ),
                 ),
-                height: 350,
+                height: screenWidth > 1280 ? 450 : 350,
                 width: screenWidth,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -66,6 +67,9 @@ class ProfilePage extends StatelessWidget {
                               ),
                               backgroundColor:
                                   MaterialStateProperty.all(Colors.white),
+                              side: MaterialStateProperty.all(
+                                const BorderSide(width: 2.0),
+                              ),
                             ),
                             onPressed: () async {
                               // Launching Google Map App with Specified Location
@@ -123,7 +127,7 @@ class ProfilePage extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(width: 5),
+                          SizedBox(width: 10),
                           Flexible(
                             fit: FlexFit.loose,
                             child: Text(
@@ -137,6 +141,7 @@ class ProfilePage extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          SizedBox(width: 10),
                           Icon(Icons.location_on_outlined),
                           SizedBox(width: 10.0),
                           Flexible(
@@ -150,6 +155,7 @@ class ProfilePage extends StatelessWidget {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
+                          SizedBox(width: 10),
                           Icon(Icons.call_outlined),
                           SizedBox(width: 10.0),
                           Flexible(
@@ -163,7 +169,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              SizedBox(height: screenWidth > 1280 ? 100 : 40),
               const Divider(),
               const SizedBox(height: 20.0),
 

@@ -20,14 +20,23 @@ class WhatsappPage extends StatelessWidget {
           children: [
             // Whatsapp Logo
             SizedBox(
+              height: 350,
+              width: 350,
               child: Image.asset(AssetsPaths.whatsappBackLogo),
             ),
-
+            const SizedBox(
+              height: 20,
+            ),
             // Whatsapp App Navigation Button
             ElevatedButton(
               onPressed: () {
                 whatsAppPageController.launchWhatsApp('918233330940');
               },
+              style: ButtonStyle(
+                side: MaterialStateProperty.all(
+                  const BorderSide(width: 1.0),
+                ),
+              ),
               child: const Padding(
                 padding: EdgeInsets.all(12.0),
                 child: Text(
