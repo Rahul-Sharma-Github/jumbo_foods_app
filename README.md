@@ -15,6 +15,10 @@ Front-end =
  - Dart
 # 
 # 
-# Demo of Jumbo Foods App (Android)
+# Demo of Jumbo Foods App
 # 
-### (https://drive.google.com/file/d/1ea-CNDQ3FheFSKJri8XxTF720671UHYG/view?usp=sharing)
+### [ Android & iOS ]
+### ( https://drive.google.com/file/d/1ea-CNDQ3FheFSKJri8XxTF720671UHYG/view?usp=sharing )
+# 
+### [ Web ]
+### 
