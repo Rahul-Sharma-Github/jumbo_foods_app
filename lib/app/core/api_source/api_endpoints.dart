@@ -1,5 +1,6 @@
 class ApiEndpoints {
-  static const String baseUrl = 'http://localhost:3000';
+  static const String baseUrl =
+      'https://nodejs-server-jumbo-foods.onrender.com'; // Render Hosted Link
   static const String createMenuItem = '/create-menu-item';
   static const String getAllMenuItems = '/all-menu-items';
   static const String getAllMenuItemsByCategory = '/menu-items';
