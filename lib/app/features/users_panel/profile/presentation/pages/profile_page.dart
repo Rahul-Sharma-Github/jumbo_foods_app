@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jumbo_foods_app/app/core/constants/theme/textstyles/textstyle.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../../core/constants/assets_path/assets_path.dart';
 import '../controllers/profile_page_controller.dart';
