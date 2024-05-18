@@ -153,21 +153,8 @@ class ProfilePage extends StatelessWidget {
                             fit: FlexFit.loose,
                             child: GestureDetector(
                               onTap: () async {
-                                final Uri launchUri = Uri(
-                                  scheme: 'tel',
-                                  path: '8233330940',
-                                );
-                                //
-                                if (launchUri.toString().isNotEmpty) {
-                                  await launchUrl(
-                                      Uri.parse(launchUri.toString()));
-                                } else {
-                                  Get.snackbar(
-                                    'App Not Available',
-                                    'Install Calling App First !',
-                                    backgroundColor: Colors.orange[300],
-                                  );
-                                }
+                                // Function to Dial a Specified Phone Number
+                                profilePageController.dialNumber('8233330940');
                               },
                               child: const Text('+91 82333 30940'),
                             ),

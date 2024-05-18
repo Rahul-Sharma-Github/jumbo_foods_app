@@ -16,4 +16,22 @@ class ProfilePageController extends GetxController {
       );
     }
   }
+
+  // Function to Dial a Specified Phone Number
+  Future<void> dialNumber(String number) async {
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: number,
+    );
+    //
+    if (launchUri.toString().isNotEmpty) {
+      await launchUrl(Uri.parse(launchUri.toString()));
+    } else {
+      Get.snackbar(
+        'App Not Available',
+        'Install Calling App First !',
+        backgroundColor: Colors.orange[300],
+      );
+    }
+  }
 }
