@@ -115,7 +115,7 @@ class ProfilePage extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10.0),
-              const Flexible(
+              Flexible(
                 fit: FlexFit.loose,
                 child: Card(
                   margin: EdgeInsets.zero,
@@ -123,8 +123,8 @@ class ProfilePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      SizedBox(height: 20.0),
-                      Row(
+                      const SizedBox(height: 20.0),
+                      const Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(width: 10),
@@ -137,8 +137,8 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20.0),
-                      Row(
+                      const SizedBox(height: 20.0),
+                      const Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(width: 10),
@@ -151,20 +151,39 @@ class ProfilePage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          SizedBox(width: 10),
-                          Icon(Icons.call_outlined),
-                          SizedBox(width: 10.0),
+                          const SizedBox(width: 10),
+                          const Icon(Icons.call_outlined),
+                          const SizedBox(width: 10.0),
                           Flexible(
                             fit: FlexFit.loose,
-                            child: Text('+91 82333 30940'),
+                            child: GestureDetector(
+                              onTap: () async {
+                                final Uri launchUri = Uri(
+                                  scheme: 'tel',
+                                  path: '8233330940',
+                                );
+                                //
+                                if (launchUri.toString().isNotEmpty) {
+                                  await launchUrl(
+                                      Uri.parse(launchUri.toString()));
+                                } else {
+                                  Get.snackbar(
+                                    'App Not Available',
+                                    'Install Calling App First !',
+                                    backgroundColor: Colors.orange[300],
+                                  );
+                                }
+                              },
+                              child: const Text('+91 82333 30940'),
+                            ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 20.0),
+                      const SizedBox(height: 20.0),
                     ],
                   ),
                 ),
