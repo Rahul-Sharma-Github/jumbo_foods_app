@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      smartManagement: SmartManagement.full,
+      // smartManagement: SmartManagement.full,
       debugShowCheckedModeBanner: false,
       title: 'Jumbo Foods',
       theme: ThemeData(
