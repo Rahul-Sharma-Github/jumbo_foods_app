@@ -73,17 +73,8 @@ class ProfilePage extends StatelessWidget {
                             ),
                             onPressed: () async {
                               // Launching Google Map App with Specified Location
-                              const String mapUrl =
-                                  "https://maps.app.goo.gl/KiQgkUd3nsGJgUoE6";
-                              if (mapUrl.isNotEmpty) {
-                                await launchUrl(Uri.parse(mapUrl));
-                              } else {
-                                Get.snackbar(
-                                  'App Not Available',
-                                  'Install Google Map First !',
-                                  backgroundColor: Colors.orange[300],
-                                );
-                              }
+                              profilePageController.navigateToMap(
+                                  "https://maps.app.goo.gl/KiQgkUd3nsGJgUoE6");
                             },
                             child: const Text(
                               'See Direction on Google Map',
