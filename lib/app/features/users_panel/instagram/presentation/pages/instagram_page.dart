@@ -27,7 +27,7 @@ class InstagramPage extends StatelessWidget {
 
             // Button to navigate to instagram app with specific profile
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 instagramPageController.launchInstagram('jumbofoods_');
               },
               style: ButtonStyle(

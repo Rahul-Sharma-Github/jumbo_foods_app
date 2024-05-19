@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 class InstagramPageController extends GetxController {
   // Method to Launch Instagram App & Navigate to Instagram Profile
-  void launchInstagram(String username) async {
+  Future<void> launchInstagram(String username) async {
     // // Specifying Instagram profile url with username
     String url = 'https://www.instagram.com/$username/';
 
-    // checking if your phone have a app to handle this url
+    // checking if username is empty or not
     if (username.isNotEmpty) {
-      // if have, then launch the url inside supported App (Instagram)
+      // if Not Empty, then launch the url inside supported App (Instagram)
       await launchUrl(Uri.parse(url));
     } else {
       // else, Show the Warning
