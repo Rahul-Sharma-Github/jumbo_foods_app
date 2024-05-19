@@ -22,7 +22,9 @@ class HomeWrapperPage extends StatelessWidget {
     // double screenHeight = mediaQueryData.size.height;
     return Scaffold(
       appBar: appBar(context),
-      body: Obx(
+      body:
+          // Wrapper for Different Pages
+          Obx(
         () => Center(
           child: SizedBox(
             width: screenWidth > 1280 ? screenWidth / 1.5 : screenWidth,
