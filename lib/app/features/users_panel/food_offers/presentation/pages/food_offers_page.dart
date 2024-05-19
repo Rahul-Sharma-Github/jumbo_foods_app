@@ -21,7 +21,7 @@ class FoodOffersPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               //
-              // GridView.builder Widget
+              // GridView.builder Widget to show Food Offers Images
               GridView.builder(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 shrinkWrap: true,
