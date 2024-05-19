@@ -40,7 +40,7 @@ class SearchPage extends StatelessWidget {
                   },
                 ),
                 const SizedBox(height: 15.0),
-                // ListView.builder Widget to Display Filtered
+                // ListView.builder Widget to Display Filtered List Items
                 Obx(
                   () => ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
