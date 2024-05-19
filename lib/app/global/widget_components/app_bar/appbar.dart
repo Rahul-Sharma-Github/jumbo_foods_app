@@ -11,6 +11,7 @@ PreferredSizeWidget appBar(BuildContext context) {
     // elevation: 5,
     toolbarHeight: screenWidth > 866 ? 100 : 65,
     leadingWidth: screenWidth > 866 ? 150 : 110,
+    // Leading Widget to show Logo Image
     leading: Center(
       child: Padding(
         padding: const EdgeInsets.only(left: 0, top: 10),
@@ -27,6 +28,7 @@ PreferredSizeWidget appBar(BuildContext context) {
         child: Padding(
           padding: const EdgeInsets.only(right: 14),
           child: SizedBox(
+            // Button to Navigate to SearchPage
             child: ElevatedButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(EdgeInsets.symmetric(
