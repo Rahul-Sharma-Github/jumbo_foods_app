@@ -29,7 +29,7 @@ class WhatsappPage extends StatelessWidget {
             ),
             // Whatsapp App Navigation Button
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 whatsAppPageController.launchWhatsApp('918233330940');
               },
               style: ButtonStyle(

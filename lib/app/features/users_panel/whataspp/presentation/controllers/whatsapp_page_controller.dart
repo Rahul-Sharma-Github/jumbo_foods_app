@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class WhatsAppPageController extends GetxController {
   // Method to Launch WhatsApp App & Navigate to WhatsApp Profile
-  void launchWhatsApp(String phone, {String? message}) async {
+  Future<void> launchWhatsApp(String phone, {String? message}) async {
     // Specifying WhatsApp profile url with Ph. Number
     String url = 'https://wa.me/$phone';
 
@@ -14,9 +14,9 @@ class WhatsAppPageController extends GetxController {
       url += '?text=${Uri.encodeComponent(message)}';
     }
 
-    // checking if your phone have a app to handle this url
+    // checking if phone number is empty or not
     if (phone.isNotEmpty) {
-      // if have, then launch the url inside supported App (WhatsApp)
+      // if not empty, then launch the url inside supported App (WhatsApp)
       await launchUrl(Uri.parse(url));
     } else {
       // else, Show the Warning
