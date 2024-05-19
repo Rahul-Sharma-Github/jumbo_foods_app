@@ -8,6 +8,7 @@ class SearchPageController extends GetxController {
   @override
   void onInit() async {
     super.onInit();
+    // Method to Fetch and Store All Menu Items inside dataList variable
     await fetchAllMenuItems();
   }
 
@@ -17,7 +18,7 @@ class SearchPageController extends GetxController {
   // List to store api response
   var dataList = [].obs;
 
-  // List to store filtered response
+  // List to store filtered items from dataList
   var filteredList = [].obs;
 
   // API Request to get all menu items
@@ -27,6 +28,7 @@ class SearchPageController extends GetxController {
       if (response.statusCode == 200) {
         dataList.value = await response.data!;
         debugPrint('dataList = $dataList');
+        // After fetching, initially Storing dataList items inside filteredList
         filteredList.value = List.from(dataList);
         debugPrint('filtered List = $filteredList');
       }
@@ -36,7 +38,9 @@ class SearchPageController extends GetxController {
   }
 
   // filter list to get latest filtered data
+  // Filtering from dataList and storing filtered data inside filteredList
   void filterData(String query) {
+    // checking for each item in dataList [ if searched Name is equal to itemname ]
     filteredList.value = dataList
         .where(
           (item) => item['itemname']
