@@ -27,7 +27,7 @@ Front-end =
 # 
 ### Download from here =
 # 
-#### Android Version - 
+#### Android Version [ .APK File ]- 
 #### [ https://drive.google.com/file/d/1OB5mg3a3DxOmyuzMEVZv7h5HlidBbUi3/view?usp=sharing ]
 # 
 # 
